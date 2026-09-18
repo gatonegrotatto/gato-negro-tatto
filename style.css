@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 6%;
+
+    background: rgba(0,0,0,0.85);
+}
+
+.logo {
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+h1 {
+    font-size: clamp(60px, 12vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: clamp(40px, 7vw, 90px);
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+.hero-content > p {
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: white;
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 120px 8%;
+}
+
+.description {
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+.dark-section {
+    background: #111;
+}
+
+.styles {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 60px;
+
+    margin-top: 60px;
+}
+
+.styles h3 {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.about {
+    padding: 150px 8%;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+}
+
+.about > div {
+    max-width: 700px;
+}
+
+.about p {
+    margin-bottom: 25px;
+}
+
+.international {
+    text-align: center;
+
+    padding: 130px 8%;
+
+    background: #161616;
+}
+
+.international p {
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.international .button {
+    margin-top: 30px;
+}
+
+.contact {
+    text-align: center;
+    padding: 130px 8%;
+}
+
+.contact p {
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+.contact .button,
+.contact .instagram {
+    margin: 15px 5px;
+}
+
+.instagram {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+
+    background: #050505;
+
+    font-size: 12px;
+
+    opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+
+    .menu {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .styles {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
